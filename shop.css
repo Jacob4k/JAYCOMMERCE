@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+}
+
+.menu-btn{
+    color: #424144;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar{
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+    z-index: 999;
+    background-color: #f3f4f6;
+    box-shadow: 0 0 14px rgba(0, 0, 0.3);
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 blue;
+}
+
+.navbar .logo h1{
+    color: blue;
+    border-bottom: 4px solid blue;
+}
+
+.navbar .logo h1:hover{
+    color: blue;
+    border-bottom: 4px solid #f63e4e;
+    cursor: pointer;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    display: block;
+    margin-left: 20px;
+    color: #424144;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar .menu li .active{
+    border-bottom: 4px solid Blue;
+}
+
+.navbar .menu li a i{
+    color: blue;
+}
+
+.navbar .menu li a:hover{
+    border-bottom: 4px solid #f63e4e;
+}
+
+.content{
+    background-image: url(weblogo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    height: 100vh;
+}
+
+.content h1{
+    font-size: 40px;
+}
+
+.content p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.content button{
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: none;
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 blue;
+    color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.pheading{
+    text-align: center;
+    margin: 50px 0;
+    color: #424144;
+}
+
+.sec{
+    padding: 10px 5%;
+    margin-bottom: 50px;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.products .card{
+    width: 270px;
+    height: auto;
+    margin: 10px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0.3);
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+.products .card h2{
+    padding: 5px 20px;
+    opacity: .8;
+}
+
+.products .card h1{
+    font-weight: 900;
+    font-size: 20px;
+    color: #424144;
+    padding: 0 20px;
+}
+
+.products .card span{
+    color: #f63e4e;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-image{
+    background-color: aqua;
+    height: 180px;
+    margin-bottom: 15px;
+    background-size: cover
+}
+
+
+.products .card .btn{
+    font-size: 13px;
+    color: #f63e4e;
+    padding: 10px 18px;
+    font-weight: 900;
+    border: 1px solid #f63e4e;
+    border-radius: 20px;
+}
+
+.products .card .btn:hover{
+    cursor: pointer;
+    background-color: #f63e4e;
+    color: white;
+}
+
+.products .card .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.car-1{
+    background-image: url('shoes.jpg');
+}
+
+.car-2{
+    background-image: url(bag.jpg);
+}
+
+.car-3{
+    background-image: url(sandal.jpg);
+}
+
+.car-4{
+    background-image: url(watch.jpg);
+}
+
+.car-5{
+    background-image: url(watchw.jpg);
+}
+
+.car-6{
+    background-image: url(lambo.jpg);
+}
+
+footer{
+    background-color: #f3f4f6;
+    height: 10vh;
+}
+
+footer p{
+    text-align: center;
+    margin: auto;
+}
+
+footer p a{
+    text-decoration: none;
+    color: #f63e4e;
+    font-weight: bold;
+}
+
+@media (max-width: 820px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background-color: #f3f4f6;
+        text-align: center;
+        padding-top: 80px;
+        transition: all .3s ease;
+    }
+
+    .navbar .menu.active{
+        left: 0;
+    }
+
+    .navbar .menu li{
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar .menu li a{
+        margin: 10px;
+        font-size: 25px;
+    }
+
+}
